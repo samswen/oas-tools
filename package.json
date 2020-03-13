@@ -1,6 +1,6 @@
 {
   "name": "@samwen/oas-tools",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "From isa-group/oas-tools: NodeJS module to manage RESTful APIs defined with OpenAPI 3.0 Specs over express servers",
   "main": "src/index.js",
   "scripts": {
