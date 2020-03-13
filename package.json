@@ -1,10 +1,10 @@
 {
   "name": "@samwen/oas-tools",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "From isa-group/oas-tools: NodeJS module to manage RESTful APIs defined with OpenAPI 3.0 Specs over express servers",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./tests/basic.js",
+    "test": "snyk test && mocha ./tests/basic.js",
     "test:tdd": "mocha ./tests/basic.js -w",
     "lint": "eslint src/**/*.js Gruntfile.js tests/**/*.js",
     "coverage": "nyc mocha ./tests/basic.js",
@@ -17,7 +17,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isa-group/oas-tools.git"
+    "url": "git+https://github.com/samswen/oas-tools.git"
   },
   "snyk": true,
   "nyc": {

@@ -386,6 +386,7 @@ function registerPaths(specDoc, app) {
  *@param {object} oasDoc - Specification file.
  *@param {object} app - Express server used for the application. Needed to register the paths.
  *@param {function} callback - Function in which the app is started.
+ *@returns {object} dereferenced specification document object
  */
 var initialize = function initialize(oasDoc, app, callback) {
 
@@ -397,6 +398,8 @@ var initialize = function initialize(oasDoc, app, callback) {
   registerPaths(fullSchema, app);
 
   callback();
+
+  return fullSchema;
 };
 
 /**
@@ -404,6 +407,7 @@ var initialize = function initialize(oasDoc, app, callback) {
  *@param {object} specDoc - Specification file.
  *@param {function} app - //TODO IN CASE EXPRESS CAN BE USED INSTEAD OF CONNECT, USER MUST PASS THIS TO initializeMiddleware TO REGISTER ROUTES.
  *@param {function} callback - Function that initializes middlewares one by one.
+  *@returns {object} dereferenced specification document object
  */
 var initializeMiddleware = function initializeMiddleware(specDoc, app, callback) {
 
@@ -426,6 +430,8 @@ var initializeMiddleware = function initializeMiddleware(specDoc, app, callback)
   };
   callback(middleware);
   registerPaths(fullSchema, app);
+
+  return fullSchema;
 };
 
 module.exports = {
